@@ -14,7 +14,7 @@
 <table border="1" cellpadding="16" cellspacing="0" width="100%">
   <tr>
     <td width="60%" valign="top">
-      <h3>🌸 About Me</h3>
+      <h3>• About Me</h3>
       <p>
         I am a B.Tech CSE (AIML) student at <strong>Techno International New Town</strong> who loves building software with Python and FastAPI.
         Passionate about crafting clean backend architectures, responsive user interfaces, and aesthetic developer tools.

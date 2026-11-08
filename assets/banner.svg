@@ -1,299 +1,45 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 360" width="100%" height="auto">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300" width="100%" height="auto">
   <defs>
-    <!-- Background Gradient: #0d1020 -> #16123a -> #241552 -->
-    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0d1020" />
-      <stop offset="50%" stop-color="#16123a" />
-      <stop offset="100%" stop-color="#241552" />
+    <!-- Pastel Purple/Pink Gradient matching PennyPetal flower illustration colors (#A68BEA -> #E57AAB -> #FFD6E8) -->
+    <linearGradient id="pastelGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#A68BEA" />
+      <stop offset="48%" stop-color="#E57AAB" />
+      <stop offset="100%" stop-color="#FFD6E8" />
     </linearGradient>
 
-    <!-- Aparna Maity Name Gradient: white to lavender -->
-    <linearGradient id="nameGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#ffffff" />
-      <stop offset="100%" stop-color="#d9cbff" />
-    </linearGradient>
-
-    <!-- Star Motif Gradient: #e4d4ff to #9d7be0 -->
-    <linearGradient id="lilacStarGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#e4d4ff" />
-      <stop offset="100%" stop-color="#9d7be0" />
-    </linearGradient>
-
-    <!-- Crescent Moon Gradient: pale gold #f8dc86 -->
-    <linearGradient id="crescentGoldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#fff5cf" />
-      <stop offset="55%" stop-color="#f8dc86" />
-      <stop offset="100%" stop-color="#e4be56" />
-    </linearGradient>
-
-    <!-- Soft Purple Glow Behind Star -->
-    <radialGradient id="purpleGlow" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#9d7be0" stop-opacity="0.45" />
-      <stop offset="50%" stop-color="#6944bf" stop-opacity="0.18" />
-      <stop offset="100%" stop-color="#16123a" stop-opacity="0" />
+    <!-- Subtle soft light auras for depth -->
+    <radialGradient id="softAura1" cx="20%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="#E6D9FF" stop-opacity="0.4" />
+      <stop offset="100%" stop-color="#A68BEA" stop-opacity="0" />
+    </radialGradient>
+    <radialGradient id="softAura2" cx="80%" cy="70%" r="60%">
+      <stop offset="0%" stop-color="#FFF0F5" stop-opacity="0.45" />
+      <stop offset="100%" stop-color="#FFD6E8" stop-opacity="0" />
     </radialGradient>
 
-    <!-- Soft Gold Glow Behind Moon -->
-    <radialGradient id="goldGlow" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#f8dc86" stop-opacity="0.42" />
-      <stop offset="50%" stop-color="#cca035" stop-opacity="0.16" />
-      <stop offset="100%" stop-color="#16123a" stop-opacity="0" />
-    </radialGradient>
-
-    <!-- Clip Path for rounded corners -->
-    <clipPath id="bannerClip">
-      <rect width="1280" height="360" rx="20" ry="20" />
+    <clipPath id="roundedCorners">
+      <rect width="1200" height="300" rx="20" ry="20" />
     </clipPath>
   </defs>
 
   <!-- Banner Outer Rounded Container -->
-  <g clip-path="url(#bannerClip)">
-    <!-- Diagonal Gradient Background -->
-    <rect width="1280" height="360" fill="url(#bgGrad)" />
+  <g clip-path="url(#roundedCorners)">
+    <rect width="1200" height="300" fill="url(#pastelGrad)" />
+    <rect width="1200" height="300" fill="url(#softAura1)" />
+    <rect width="1200" height="300" fill="url(#softAura2)" />
 
-    <!-- Mountain Ridge Silhouette along the bottom in #1d1648 -->
-    <!-- Background mountain ridge for atmospheric depth -->
-    <path d="M 0 360 L 0 318 L 40 308 L 90 322 L 150 296 L 210 312 L 270 288 L 340 310 L 410 292 L 480 316 L 550 328 L 640 336 L 730 328 L 800 316 L 870 292 L 940 310 L 1010 288 L 1070 312 L 1130 296 L 1190 322 L 1240 308 L 1280 318 L 1280 360 Z" fill="#1d1648" opacity="0.45" />
-
-    <!-- Foreground rugged mountain ridge in #1d1648 -->
-    <path d="M 0 360 L 0 328 L 30 318 L 65 330 L 110 305 L 155 322 L 200 282 L 245 315 L 290 298 L 345 320 L 395 296 L 455 324 L 520 334 L 580 342 L 640 344 L 700 342 L 760 334 L 825 324 L 885 296 L 935 320 L 990 298 L 1035 315 L 1080 282 L 1125 322 L 1170 305 L 1215 330 L 1250 318 L 1280 328 L 1280 360 Z" fill="#1d1648" />
-
-    <!-- Faint Constellations near the top in lilac (#cdb8ff) with thin lines -->
-    <!-- Left Constellation -->
-    <g stroke="#cdb8ff" stroke-width="0.9" stroke-opacity="0.32" stroke-linecap="round">
-      <line x1="240" y1="68" x2="285" y2="42" />
-      <line x1="285" y1="42" x2="340" y2="56" />
-      <line x1="340" y1="56" x2="390" y2="34" />
-      <line x1="390" y1="34" x2="445" y2="54" />
-      <line x1="340" y1="56" x2="365" y2="84" />
-      <line x1="365" y1="84" x2="410" y2="92" />
-    </g>
-    <!-- Left Constellation Stars -->
-    <g fill="#cdb8ff">
-      <circle cx="240" cy="68" r="2.2" fill-opacity="0.75" />
-      <circle cx="285" cy="42" r="2.8" fill-opacity="0.85" />
-      <circle cx="340" cy="56" r="2.2" fill-opacity="0.7" />
-      <circle cx="390" cy="34" r="3.2" fill-opacity="0.9" />
-      <circle cx="445" cy="54" r="2.2" fill-opacity="0.7" />
-      <circle cx="365" cy="84" r="2" fill-opacity="0.6" />
-      <circle cx="410" cy="92" r="2.5" fill-opacity="0.75" />
-    </g>
-
-    <!-- Right Constellation -->
-    <g stroke="#cdb8ff" stroke-width="0.9" stroke-opacity="0.32" stroke-linecap="round">
-      <line x1="835" y1="54" x2="890" y2="34" />
-      <line x1="890" y1="34" x2="940" y2="56" />
-      <line x1="940" y1="56" x2="995" y2="42" />
-      <line x1="995" y1="42" x2="1040" y2="68" />
-      <line x1="940" y1="56" x2="915" y2="84" />
-      <line x1="915" y1="84" x2="870" y2="92" />
-    </g>
-    <!-- Right Constellation Stars -->
-    <g fill="#cdb8ff">
-      <circle cx="835" cy="54" r="2.2" fill-opacity="0.7" />
-      <circle cx="890" cy="34" r="3.2" fill-opacity="0.9" />
-      <circle cx="940" cy="56" r="2.2" fill-opacity="0.7" />
-      <circle cx="995" cy="42" r="2.8" fill-opacity="0.85" />
-      <circle cx="1040" cy="68" r="2.2" fill-opacity="0.75" />
-      <circle cx="915" cy="84" r="2" fill-opacity="0.6" />
-      <circle cx="870" cy="92" r="2.5" fill-opacity="0.75" />
-    </g>
-
-    <!-- Upper Center Subtle Constellation Link -->
-    <g stroke="#cdb8ff" stroke-width="0.8" stroke-opacity="0.22">
-      <line x1="510" y1="26" x2="545" y2="38" />
-      <line x1="735" y1="38" x2="770" y2="26" />
-    </g>
-    <circle cx="510" cy="26" r="1.8" fill="#cdb8ff" fill-opacity="0.6" />
-    <circle cx="545" cy="38" r="2.2" fill="#cdb8ff" fill-opacity="0.7" />
-    <circle cx="735" cy="38" r="2.2" fill="#cdb8ff" fill-opacity="0.7" />
-    <circle cx="770" cy="26" r="1.8" fill="#cdb8ff" fill-opacity="0.6" />
-
-    <!-- Scattered Tiny White Stars -->
-    <g fill="#ffffff">
-      <circle cx="70" cy="50" r="1.2" opacity="0.65" />
-      <circle cx="110" cy="85" r="1.8" opacity="0.75" />
-      <circle cx="55" cy="145" r="1.1" opacity="0.45" />
-      <circle cx="95" cy="240" r="1.4" opacity="0.55" />
-      <circle cx="185" cy="55" r="1.5" opacity="0.7" />
-      <circle cx="215" cy="120" r="1.2" opacity="0.5" />
-      <circle cx="180" cy="260" r="1.5" opacity="0.65" />
-      <circle cx="270" cy="140" r="1" opacity="0.45" />
-      <circle cx="315" cy="195" r="1.6" opacity="0.6" />
-      <circle cx="375" cy="145" r="1.2" opacity="0.55" />
-      <circle cx="470" cy="38" r="1.8" opacity="0.7" />
-      <circle cx="490" cy="90" r="1.3" opacity="0.45" />
-      <circle cx="515" cy="160" r="1.1" opacity="0.4" />
-      <circle cx="640" cy="24" r="1.5" opacity="0.7" />
-      <circle cx="765" cy="160" r="1.1" opacity="0.4" />
-      <circle cx="790" cy="90" r="1.3" opacity="0.45" />
-      <circle cx="810" cy="38" r="1.8" opacity="0.7" />
-      <circle cx="905" cy="145" r="1.2" opacity="0.55" />
-      <circle cx="965" cy="195" r="1.6" opacity="0.6" />
-      <circle cx="1010" cy="140" r="1" opacity="0.45" />
-      <circle cx="1100" cy="55" r="1.5" opacity="0.7" />
-      <circle cx="1065" cy="120" r="1.2" opacity="0.5" />
-      <circle cx="1100" cy="260" r="1.5" opacity="0.65" />
-      <circle cx="1185" cy="240" r="1.4" opacity="0.55" />
-      <circle cx="1225" cy="145" r="1.1" opacity="0.45" />
-      <circle cx="1170" cy="85" r="1.8" opacity="0.75" />
-      <circle cx="1210" cy="50" r="1.2" opacity="0.65" />
-      <!-- Subtle micro-sparkles -->
-      <path d="M 140 70 L 141.5 73 L 144.5 74.5 L 141.5 76 L 140 79 L 138.5 76 L 135.5 74.5 L 138.5 73 Z" opacity="0.75" />
-      <path d="M 1140 70 L 1141.5 73 L 1144.5 74.5 L 1141.5 76 L 1140 79 L 1138.5 76 L 1135.5 74.5 L 1138.5 73 Z" opacity="0.75" />
-      <path d="M 470 270 L 471.5 272.5 L 474 274 L 471.5 275.5 L 470 278 L 468.5 275.5 L 466 274 L 468.5 272.5 Z" opacity="0.6" />
-      <path d="M 810 270 L 811.5 272.5 L 814 274 L 811.5 275.5 L 810 278 L 808.5 275.5 L 806 274 L 808.5 272.5 Z" opacity="0.6" />
-    </g>
-
-    <!-- LEFT SIDE: Large Four-Point Lilac Star & Concentric Rings Motif -->
-    <g transform="translate(160, 180)">
-      <!-- Soft purple glow behind -->
-      <circle cx="0" cy="0" r="105" fill="url(#purpleGlow)" />
-
-      <!-- Concentric Thin Rings (one solid, one dashed) -->
-      <circle cx="0" cy="0" r="70" fill="none" stroke="#cdb8ff" stroke-opacity="0.3" stroke-width="1.2" />
-      <circle cx="0" cy="0" r="92" fill="none" stroke="#cdb8ff" stroke-opacity="0.38" stroke-width="1.2" stroke-dasharray="6 5" />
-
-      <!-- Cardinal orbit dots on dashed ring -->
-      <circle cx="0" cy="-92" r="2.2" fill="#cdb8ff" opacity="0.7" />
-      <circle cx="0" cy="92" r="2.2" fill="#cdb8ff" opacity="0.7" />
-      <circle cx="-92" cy="0" r="2.2" fill="#cdb8ff" opacity="0.7" />
-      <circle cx="92" cy="0" r="2.2" fill="#cdb8ff" opacity="0.7" />
-
-      <!-- Large Four-Point Lilac Star (#e4d4ff to #9d7be0) -->
-      <path d="M 0 -55 C 1.5 -16 16 -1.5 55 0 C 16 1.5 1.5 16 0 55 C -1.5 16 -16 1.5 -55 0 C -16 -1.5 -1.5 -16 0 -55 Z" fill="url(#lilacStarGrad)" />
-
-      <!-- White Center Sparkle -->
-      <path d="M 0 -18 C 0.5 -4.5 4.5 -0.5 18 0 C 4.5 0.5 0.5 4.5 0 18 C -0.5 4.5 -4.5 0.5 -18 0 C -4.5 -0.5 -0.5 -4.5 0 -18 Z" fill="#ffffff" />
-      <circle cx="0" cy="0" r="3.5" fill="#ffffff" />
-
-      <!-- Small Gold Sparkles around it (#f8dc86) -->
-      <!-- Sparkle 1: top right -->
-      <g transform="translate(56, -48)">
-        <path d="M 0 -8 Q 0.3 -1 8 0 Q 0.3 1 0 8 Q -0.3 1 -8 0 Q -0.3 -1 0 -8 Z" fill="#f8dc86" />
-        <circle cx="0" cy="0" r="1.5" fill="#ffffff" />
-      </g>
-      <!-- Sparkle 2: top left -->
-      <g transform="translate(-54, -44)">
-        <path d="M 0 -6.5 Q 0.3 -1 6.5 0 Q 0.3 1 0 6.5 Q -0.3 1 -6.5 0 Q -0.3 -1 0 -6.5 Z" fill="#f8dc86" />
-        <circle cx="0" cy="0" r="1.2" fill="#ffffff" />
-      </g>
-      <!-- Sparkle 3: bottom left -->
-      <g transform="translate(-56, 48)">
-        <path d="M 0 -7 Q 0.3 -1 7 0 Q 0.3 1 0 7 Q -0.3 1 -7 0 Q -0.3 -1 0 -7 Z" fill="#f8dc86" />
-        <circle cx="0" cy="0" r="1.3" fill="#ffffff" />
-      </g>
-      <!-- Sparkle 4: bottom right -->
-      <g transform="translate(60, 42)">
-        <path d="M 0 -6 Q 0.3 -1 6 0 Q 0.3 1 0 6 Q -0.3 1 -6 0 Q -0.3 -1 0 -6 Z" fill="#f8dc86" />
-        <circle cx="0" cy="0" r="1.2" fill="#ffffff" />
-      </g>
-      <!-- Sparkle 5: left outer -->
-      <path transform="translate(-76, 2)" d="M 0 -4.5 Q 0.2 -0.8 4.5 0 Q 0.2 0.8 0 4.5 Q -0.2 0.8 -4.5 0 Q -0.2 -0.8 0 -4.5 Z" fill="#f8dc86" opacity="0.9" />
-      <!-- Sparkle 6: right outer -->
-      <path transform="translate(76, -4)" d="M 0 -4.5 Q 0.2 -0.8 4.5 0 Q 0.2 0.8 0 4.5 Q -0.2 0.8 -4.5 0 Q -0.2 -0.8 0 -4.5 Z" fill="#f8dc86" opacity="0.9" />
-    </g>
-
-    <!-- RIGHT SIDE: Pale Gold Crescent Moon & Concentric Rings Motif -->
-    <g transform="translate(1120, 180)">
-      <!-- Soft gold glow behind -->
-      <circle cx="0" cy="0" r="105" fill="url(#goldGlow)" />
-
-      <!-- Concentric Thin Rings (one solid, one dashed - matching left side) -->
-      <circle cx="0" cy="0" r="70" fill="none" stroke="#f8dc86" stroke-opacity="0.28" stroke-width="1.2" />
-      <circle cx="0" cy="0" r="92" fill="none" stroke="#f8dc86" stroke-opacity="0.35" stroke-width="1.2" stroke-dasharray="6 5" />
-
-      <!-- Cardinal orbit dots on dashed ring -->
-      <circle cx="0" cy="-92" r="2.2" fill="#f8dc86" opacity="0.7" />
-      <circle cx="0" cy="92" r="2.2" fill="#f8dc86" opacity="0.7" />
-      <circle cx="-92" cy="0" r="2.2" fill="#f8dc86" opacity="0.7" />
-      <circle cx="92" cy="0" r="2.2" fill="#f8dc86" opacity="0.7" />
-
-      <!-- Pale Gold Crescent Moon (#f8dc86) - Centered inside rings -->
-      <g transform="rotate(-14)">
-        <g transform="translate(-21, 0)">
-          <path d="M 0 -42 A 42 42 0 0 1 0 42 A 48 48 0 0 0 0 -42 Z" fill="url(#crescentGoldGrad)" />
-        </g>
-      </g>
-
-      <!-- Small Sparkles around it (Gold & White) -->
-      <!-- Sparkle 1: top left -->
-      <g transform="translate(-56, -46)">
-        <path d="M 0 -8 Q 0.3 -1 8 0 Q 0.3 1 0 8 Q -0.3 1 -8 0 Q -0.3 -1 0 -8 Z" fill="#f8dc86" />
-        <circle cx="0" cy="0" r="1.5" fill="#ffffff" />
-      </g>
-      <!-- Sparkle 2: top right -->
-      <g transform="translate(58, -42)">
-        <path d="M 0 -6.5 Q 0.3 -1 6.5 0 Q 0.3 1 0 6.5 Q -0.3 1 -6.5 0 Q -0.3 -1 0 -6.5 Z" fill="#f8dc86" />
-        <circle cx="0" cy="0" r="1.2" fill="#ffffff" />
-      </g>
-      <!-- Sparkle 3: bottom right -->
-      <g transform="translate(60, 44)">
-        <path d="M 0 -7 Q 0.3 -1 7 0 Q 0.3 1 0 7 Q -0.3 1 -7 0 Q -0.3 -1 0 -7 Z" fill="#f8dc86" />
-        <circle cx="0" cy="0" r="1.3" fill="#ffffff" />
-      </g>
-      <!-- Sparkle 4: bottom left -->
-      <g transform="translate(-54, 46)">
-        <path d="M 0 -6 Q 0.3 -1 6 0 Q 0.3 1 0 6 Q -0.3 1 -6 0 Q -0.3 -1 0 -6 Z" fill="#f8dc86" />
-        <circle cx="0" cy="0" r="1.2" fill="#ffffff" />
-      </g>
-      <!-- Sparkle 5: top center white -->
-      <path transform="translate(-16, -68)" d="M 0 -4.5 Q 0.2 -0.8 4.5 0 Q 0.2 0.8 0 4.5 Q -0.2 0.8 -4.5 0 Q -0.2 -0.8 0 -4.5 Z" fill="#ffffff" opacity="0.85" />
-      <!-- Sparkle 6: bottom center white -->
-      <path transform="translate(20, 68)" d="M 0 -4.5 Q 0.2 -0.8 4.5 0 Q 0.2 0.8 0 4.5 Q -0.2 0.8 -4.5 0 Q -0.2 -0.8 0 -4.5 Z" fill="#ffffff" opacity="0.85" />
-    </g>
-
-    <!-- CENTER CONTENT -->
-    <!-- Center Top: Small Pill reading 'PORTFOLIO' in letter-spaced lavender text -->
-    <rect x="565" y="38" width="150" height="26" rx="13" fill="#201548" fill-opacity="0.85" stroke="#523d8c" stroke-width="1" />
-    <text x="640" y="55" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" font-weight="600" fill="#cdb8ff" letter-spacing="3.5" text-anchor="middle" dominant-baseline="central">PORTFOLIO</text>
-
-    <!-- Center: The name 'Aparna Maity' in large bold white-to-lavender gradient text -->
-    <text x="640" y="128" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="50" font-weight="800" fill="url(#nameGrad)" text-anchor="middle" letter-spacing="-0.5">Aparna Maity</text>
-
-    <!-- Gold Sparkle on Left side of name -->
-    <g transform="translate(425, 114)">
-      <path d="M 0 -11 Q 0.5 -1.5 11 0 Q 0.5 1.5 0 11 Q -0.5 1.5 -11 0 Q -0.5 -1.5 0 -11 Z" fill="#f8dc86" />
-      <circle cx="0" cy="0" r="2.2" fill="#ffffff" />
-    </g>
-    <!-- Gold Sparkle on Right side of name -->
-    <g transform="translate(855, 114)">
-      <path d="M 0 -11 Q 0.5 -1.5 11 0 Q 0.5 1.5 0 11 Q -0.5 1.5 -11 0 Q -0.5 -1.5 0 -11 Z" fill="#f8dc86" />
-      <circle cx="0" cy="0" r="2.2" fill="#ffffff" />
-    </g>
-
-    <!-- Under the name: 'Building thoughtful, modern software with Python & FastAPI' in soft lavender -->
-    <text x="640" y="168" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="16.5" font-weight="400" fill="#cdb8ff" opacity="0.95" text-anchor="middle" letter-spacing="0.3">Building thoughtful, modern software with Python &amp; FastAPI</text>
-
-    <!-- Below that, three tags with small sparkle icons: 'AI & Machine Learning', 'Backend Engineering', 'Web Development' -->
-    <!-- Tag 1: AI & Machine Learning -->
-    <rect x="350" y="206" width="180" height="30" rx="15" fill="#1e1647" fill-opacity="0.8" stroke="#48367f" stroke-width="1" />
-    <g transform="translate(370, 221)">
-      <path d="M 0 -5.5 Q 0.3 -0.8 5.5 0 Q 0.3 0.8 0 5.5 Q -0.3 0.8 -5.5 0 Q -0.3 -0.8 0 -5.5 Z" fill="#f8dc86" />
-      <circle cx="0" cy="0" r="1" fill="#ffffff" />
-    </g>
-    <text x="382" y="221" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="600" fill="#e8dcff" dominant-baseline="central">AI &amp; Machine Learning</text>
-
-    <!-- Tag 2: Backend Engineering -->
-    <rect x="550" y="206" width="180" height="30" rx="15" fill="#1e1647" fill-opacity="0.8" stroke="#48367f" stroke-width="1" />
-    <g transform="translate(574, 221)">
-      <path d="M 0 -5.5 Q 0.3 -0.8 5.5 0 Q 0.3 0.8 0 5.5 Q -0.3 0.8 -5.5 0 Q -0.3 -0.8 0 -5.5 Z" fill="#f8dc86" />
-      <circle cx="0" cy="0" r="1" fill="#ffffff" />
-    </g>
-    <text x="586" y="221" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="600" fill="#e8dcff" dominant-baseline="central">Backend Engineering</text>
-
-    <!-- Tag 3: Web Development -->
-    <rect x="750" y="206" width="180" height="30" rx="15" fill="#1e1647" fill-opacity="0.8" stroke="#48367f" stroke-width="1" />
-    <g transform="translate(784, 221)">
-      <path d="M 0 -5.5 Q 0.3 -0.8 5.5 0 Q 0.3 0.8 0 5.5 Q -0.3 0.8 -5.5 0 Q -0.3 -0.8 0 -5.5 Z" fill="#f8dc86" />
-      <circle cx="0" cy="0" r="1" fill="#ffffff" />
-    </g>
-    <text x="796" y="221" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="600" fill="#e8dcff" dominant-baseline="central">Web Development</text>
-
-    <!-- Bottom center: 'PER ASPERA AD ASTRA' in small italic serif, letter-spaced, muted purple (#9d86d4) -->
-    <text x="640" y="318" font-family="Georgia, serif" font-style="italic" font-size="13.5" font-weight="500" fill="#9d86d4" letter-spacing="5" text-anchor="middle">PER ASPERA AD ASTRA</text>
+    <!-- Centered Elegant Italic Serif Text -->
+    <text x="600" y="152" 
+          font-family="Georgia, 'Times New Roman', serif" 
+          font-style="italic" 
+          font-size="46" 
+          font-weight="500"
+          fill="#2D1538" 
+          letter-spacing="6" 
+          text-anchor="middle" 
+          dominant-baseline="central">per aspera ad astra</text>
   </g>
 
-  <!-- Thin #3a2d6e border around banner -->
-  <rect x="1" y="1" width="1278" height="358" rx="19" fill="none" stroke="#3a2d6e" stroke-width="1.5" />
+  <!-- Subtle refined inner border -->
+  <rect x="1" y="1" width="1198" height="298" rx="19" fill="none" stroke="#2D1538" stroke-opacity="0.12" stroke-width="1.5" />
 </svg>

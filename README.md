@@ -15,7 +15,7 @@
 <p>I am a B.Tech CSE (AIML) student at <strong>Techno International New Town</strong> who loves building software with Python and FastAPI. Passionate about crafting clean backend architectures, responsive user interfaces, and aesthetic developer tools.</p>
 <h3>✨ Projects</h3>
 <ul>
-<li><img src="assets/logo.svg" width="18" height="18" alt="PennyPetal Logo" style="vertical-align: middle;" /> <a href="https://github.com/aparnamaity/PennyPetal"><strong>PennyPetal</strong></a>: Pastel expense tracker web app (FastAPI + SQLite + Chart.js).</li>
+<li><img src="assets/logo.svg" width="18" height="18" alt="PennyPetal Logo" style="vertical-align: middle;" /> <a href="https://github.com/aparnamaity/PennyPetal"><strong>PennyPetal</strong></a>: Pastel expense tracker web app (FastAPI + SQLite + Chart.js) &nbsp;•&nbsp; <a href="https://pennypetal.onrender.com">Live demo</a></li>
 </ul>
 <h3>📬 Contact Me</h3>
 <p>Feel free to reach out for collaborations, discussions, or just to say hi!</p>
